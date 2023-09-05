@@ -10,7 +10,6 @@ function MoviesCardList() {
         <MoviesCard />
         <MoviesCard />
         <MoviesCard />
-       
       </ul>
       <div className="cards__button-container">
         <button className="cards__button" type="button">Ещё</button>

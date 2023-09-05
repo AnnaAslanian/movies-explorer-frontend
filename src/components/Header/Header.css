@@ -161,7 +161,8 @@
   }
 
   .header {
-    padding: 0 14px;
+    padding: 18px 14px 0 14px;
+    min-height: 0;
   }
 
   .header__link-reg{

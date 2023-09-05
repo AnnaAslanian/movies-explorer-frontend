@@ -139,8 +139,8 @@
   
     .techs__list {
       margin-top: 50px;
-      grid-template-columns: repeat(2, 84px);
-      gap: 15px;
+      grid-template-columns: repeat(2, 90px);
+      gap: 10px;
     }
 
     .techs__list-title {

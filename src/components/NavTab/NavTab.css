@@ -1,38 +1,38 @@
 .nav-tab {
-    position: absolute;
-    bottom: 75px;
+  position: absolute;
+  bottom: 75px;
 }
 
 .nav-tab__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 129px;
-    height: 36px;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    text-decoration: none;
-    background-color: #073042;
-    color: #FFF;
-    border-radius: 3px;
-    border: 1px solid #FFF;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 129px;
+  height: 36px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #073042;
+  color: #FFF;
+  border-radius: 3px;
+  border: 1px solid #FFF;
+  cursor: pointer;
 }
 
 .nav-tab__button:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 1023px) {
-    .nav-tab {
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  .nav-tab {
+    left: 50%;
+    transform: translateX(-50%);
   }
-  
-  @media screen and (max-width: 767px) {
-    .nav-tab {
-      bottom: 30px;
-    }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-tab {
+    bottom: 30px;
   }
+}

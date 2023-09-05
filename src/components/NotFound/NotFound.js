@@ -4,13 +4,13 @@ import "./NotFound.css"
 
 function NotFound() {
     return (
-        <section className="error">
+        <main className="error">
             <div className="error__container">
-                <h2 className="error__title">404</h2>
+                <h1 className="error__title">404</h1>
                 <p className="error__text">Страница не найдена</p>
                 <Link to="/" className="error__button">Назад</Link>
             </div>
-        </section>
+        </main>
     )
 }
 

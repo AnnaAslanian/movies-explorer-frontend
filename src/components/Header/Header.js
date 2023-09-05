@@ -47,9 +47,9 @@ function Header({ isAuth }) {
         </div>
     </ header >)}
         {isAuth && (<header className="header" style={backgroundColorStyle}>
-            <Link className="header__button-container" to="/">
+            <NavLink className="header__button-container" to="/">
                 <img src={headerLogo} alt="Логотип" />
-            </Link>
+            </NavLink>
             <div className="header__button-container--active">
                 <NavLink className={location.pathname === "/movies" ? "header__button-active" : "header__link"}
                     to="/movies">Фильмы</NavLink>

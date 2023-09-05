@@ -114,3 +114,43 @@
   .profile__exit:hover{
     opacity: .7;
   }
+
+  @media screen and (max-width: 1023px) {
+    .profile__container {
+      padding-top: 236px;
+      padding-bottom: 269px;
+    }
+  
+    .profile__title {
+      margin-bottom: 96px;
+    }
+    
+    .profile__button-save {
+      margin-top: 210px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .profile__container {
+      padding: 54px 30px 40px 30px;
+    }
+  
+    .profile__title {
+      margin-bottom: 80px;
+    }
+    
+    .profile__input {
+      width: 150px;
+    }
+    
+    .profile__button-save {
+      margin-top: 362px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+    
+    .profile__exit {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
