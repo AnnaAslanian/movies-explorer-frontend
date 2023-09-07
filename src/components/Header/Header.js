@@ -36,7 +36,7 @@ function Header({ isAuth }) {
         <Link className="header__logo header__button" to="/">
             <img src={headerLogo} alt="Логотип" />
         </Link>
-        <div className="header__button-container">
+        <nav className="header__button-container">
             <Link className="header__link-registration header__button" to="/signup">
                 Регистрация
             </Link>
@@ -44,18 +44,18 @@ function Header({ isAuth }) {
                 
                     Войти
             </Link>
-        </div>
+        </nav>
     </ header >)}
         {isAuth && (<header className="header" style={backgroundColorStyle}>
             <NavLink className="header__button-container" to="/">
                 <img src={headerLogo} alt="Логотип" />
             </NavLink>
-            <div className="header__button-container--active">
+            <ul className="header__button-container--active">
                 <NavLink className={location.pathname === "/movies" ? "header__button-active" : "header__link"}
                     to="/movies">Фильмы</NavLink>
                 <NavLink className={location.pathname === "/saved-movies" ? "header__button-active" : "header__link"}
                     to="/saved-movies">Сoхранённые фильмы</NavLink>
-            </div>
+            </ul>
             <Link className="header__button-account header__button" to="/profile">
                 <img className="header__image" src={location.pathname === "/" ? icon_main_acc : icon_header_acc} alt="Кнопка-аккаунт" style={backgroundColorStyle} />
             </Link>

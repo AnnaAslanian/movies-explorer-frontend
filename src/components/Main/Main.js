@@ -11,13 +11,13 @@ function Main() {
     const isAuthUser = false
     return (<div className="main">
         {<Header isAuth={isAuthUser} />}
-        <main>
+        {<main>
             <Promo />
             <AboutProject />
             <Techs />
             <AboutMe />
             <Portfolio />
-        </main>
+        </main>}
         <Footer />
     </div>
     );

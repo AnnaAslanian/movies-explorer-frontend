@@ -132,11 +132,11 @@
 
   @media screen and (max-width: 576px) {
     .profile__container {
-      padding: 54px 30px 40px 30px;
+      padding: 70px 30px 40px 30px;
     }
   
     .profile__title {
-      margin-bottom: 80px;
+      margin: 0 0 80px 0;
     }
     
     .profile__input {
