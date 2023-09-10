@@ -87,7 +87,7 @@
 @media screen and (max-width: 767px) {
   .promo {
     min-height: 637px;
-    padding: 70px px 0 10px;
+    padding: 70px 10px 0 10px;
   }
 
   .promo__conteiner {

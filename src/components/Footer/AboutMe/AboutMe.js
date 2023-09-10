@@ -7,15 +7,15 @@ function AboutMe() {
     <section className="about-me">
       <h2 className="about-me__title">Студент</h2>
       <div className="about-me__block">
-        <div className="about-me__text">
-          <h3 className="about-me__name">Анна</h3>
-          <h4 className="about-me__info">Фронтенд-разработчик, 31 год</h4>
-          <p className="about-me__info_about">
+        <div className="about-me__block_text">
+          <h3 className="about-me__block_name">Анна</h3>
+          <h4 className="about-me__block_info">Фронтенд-разработчик, 31 год</h4>
+          <p className="about-me__block_about">
           Я из города Вологды, у меня есть муж и сын, закончила педагогический университет, факультет филологии. Работаю индивидуальным предпринимателем. Больше года назад начала изучать программирование, после окончания обучения буду работать по новой специальности.
           </p>
           <a
             href="https://github.com/AnnaAslanian"
-            className="about-me__link"
+            className="about-me__block_link"
             target="_blank"
             rel="noreferrer"
           >

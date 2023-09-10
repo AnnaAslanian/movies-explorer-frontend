@@ -60,7 +60,7 @@
 
 @media screen and (max-width: 1023px) {
   .search {
-    padding: 0 30px;
+    padding: 0;
   }
   .search__form {
     margin-bottom: 0;
@@ -80,7 +80,7 @@
   .search__form {
     padding-bottom: 10px;
     margin-bottom: 40px;
-    padding-top: 108px;
+    padding-top: 100px;
   }
 
   .search__label {
