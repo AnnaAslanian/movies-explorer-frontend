@@ -53,10 +53,16 @@ line-height: 20px;
       font-size: 28px;
     }
   }
+
+  @media screen and (max-width: 767px) {
+    .portfolio {
+      padding: 70px 14px 70px 14px;
+    }
+  }
   
   @media screen and (max-width: 576px) {
     .portfolio {
-      padding: 0 14px 70px 14px;
+      padding: 70px 14px 70px 14px;
     }
 
     .portfolio__link {
