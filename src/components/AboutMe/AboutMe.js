@@ -6,16 +6,16 @@ function AboutMe() {
   return (
     <section className="about-me">
       <h2 className="about-me__title">Студент</h2>
-      <div className="about-me__block">
-        <div className="about-me__text">
-          <h3 className="about-me__name">Анна</h3>
-          <h4 className="about-me__info">Фронтенд-разработчик, 31 год</h4>
-          <p className="about-me__info_about">
+      <div className="about">
+        <div className="about__info">
+          <h3 className="about__name">Анна</h3>
+          <h4 className="about__profession">Фронтенд-разработчик, 31 год</h4>
+          <p className="about__subtitle">
           Я из города Вологды, у меня есть муж и сын, закончила педагогический университет, факультет филологии. Работаю индивидуальным предпринимателем. Больше года назад начала изучать программирование, после окончания обучения буду работать по новой специальности.
           </p>
           <a
             href="https://github.com/AnnaAslanian"
-            className="about-me__link"
+            className="about__link"
             target="_blank"
             rel="noreferrer"
           >

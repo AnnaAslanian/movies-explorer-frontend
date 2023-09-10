@@ -14,19 +14,19 @@
   border-bottom: 2px solid rgba(170, 170, 170, .6);
 }
 
-.about-me__block {
+.about {
   display: flex;
   justify-content: space-between;
   margin-top: 63px;
 }
 
-.about-me__block_text {
+.about__info {
   display: flex;
   flex-direction: column;
   max-width: 600px;
 }
 
-.about-me__block_name {
+.about__name {
   margin: 0;
   font-weight: 400;
   font-size: 50px;
@@ -34,21 +34,21 @@
   letter-spacing: -0.04em;
 }
 
-.about-me__block_info {
+.about__profession {
   margin: 18px 0 0;
   font-weight: 500;
   font-size: 18px;
   line-height: 20px;
 }
 
-.about-me__block_about {
+.about__subtitle {
   margin: 26px 0 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
 }
 
-.about-me__block_link {
+.about__link {
   margin: 98px 0 0;
   font-weight: 500;
   font-size: 14px;
@@ -59,7 +59,7 @@
   transition: 0.7s;
 }
 
-.about-me__link:hover {
+.about__link:hover {
   opacity: .7;
 }
 
@@ -78,28 +78,28 @@
     padding: 90px 50px;
   }
 
-  .about-me__block_text {
+  .about__info {
     margin-right: 49px;
   }
 
-  .about-me__block_name {
+  .about__name {
     font-size: 40px;
     line-height: 40px;
   }
 
-  .about-me__block_info {
+  .about__profession {
     margin-top: 16px;
     font-size: 12px;
     line-height: 18px;
   }
 
-  .about-me__block_about{
+  .about__subtitle{
     margin-top: 20px;
     font-size: 12px;
     line-height: 18px;
   }
 
-  .about-me__block_link {
+  .about__link{
     margin-top: 87px;
     font-size: 14px;
     line-height: 17px;
@@ -116,13 +116,13 @@
     padding: 0 14px;
   }
 
-  .about-me__block {
+  .about {
     margin-top: 60px;
     flex-direction: column-reverse;
     align-items: center;
   }
 
-  .about-me__block_text {
+  .about__info {
     margin-right: 0px;
   }
 
@@ -132,24 +132,24 @@
     line-height: 22px;
   }
 
-  .about-me__block_name {
+  .about__name {
     margin-top: 40px;
     font-size: 30px;
     line-height: 36px;
   }
 
-  .about-me__block_about {
+  .about__subtitle {
     font-size: 11px;
     line-height: 16px;
   }
 
-  .about-me__block_info {
+  .about__profession {
     margin-top: 20px;
     font-size: 11px;
     line-height: 16px;
   }
   
-  .about-me__block_link {
+  .about__link {
     margin-top: 40px;
     font-size: 14px;
     line-height: 17px;
