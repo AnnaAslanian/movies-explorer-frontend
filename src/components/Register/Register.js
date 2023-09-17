@@ -4,6 +4,7 @@ import Form from "../Form/Form"
 import { validator } from "../Validator/Validator"
 
 function Register({ onSubmit, errorGlobal, resetErrorGlobal }) {
+
   const [formValue, setFormValue] = useState({
     email: "",
     password: "",
@@ -101,6 +102,7 @@ function Register({ onSubmit, errorGlobal, resetErrorGlobal }) {
               required
               placeholder="Имя"
               onChange={handleChangeLogged}
+
             />
             <span className="form__input-error">{errors.name}</span>
           </label>
@@ -116,6 +118,7 @@ function Register({ onSubmit, errorGlobal, resetErrorGlobal }) {
               minLength="4"
               maxLength="40"
               onChange={handleChangeLogged}
+
             />
             <span className="form__input-error">{errors.email}</span>
           </label>
@@ -132,10 +135,14 @@ function Register({ onSubmit, errorGlobal, resetErrorGlobal }) {
               minLength="6"
               maxLength="20"
               onChange={handleChangeLogged}
+
             />
             <span className="form__input-error">{errors.password}</span>
+
+            <span className="form__input-error form__input-error_general">
+              {errorGlobal}</span>
           </label>
-          <span className="form__input-error form__input-error_general">{errorGlobal}</span>
+
         </Form>
       </section>
     </main>

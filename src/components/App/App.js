@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from "react"
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom"
 import Main from "../Main/Main"
-import "./App.css"
+import NotFound from "../NotFound/NotFound"
 import Movies from "../Movies/Movies"
 import SavedMovies from "../SavedMovies/SavedMovies"
-import Profile from "../Profile/Profile"
 import Register from "../Register/Register"
 import Login from "../Login/Login"
-import NotFound from "../NotFound/NotFound"
-import { CurrentUserContext } from "../Context/CurrentUserContext"
+import Profile from "../Profile/Profile"
+import "./App.css"
+import { CurrentUserContext } from "../../contexts/CurrentUserContext"
 import { ProtectedRoute } from "../ProtectedRoute/ProtectedRoute"
 import * as auth from "../../utils/Auth"
 import { mainApi } from "../../utils/MainApi"
-
 
 function App() {
     const navigate = useNavigate()
@@ -150,13 +149,12 @@ function App() {
             .catch((err) => console.log(`Ошибка: ${err}`))
     };
 
-
     return (
         <CurrentUserContext.Provider value={currentUser}>
-        <div className="body">
-            <div className="page">
-                <Routes>
-                <Route path="/" element={<Main loggedIn={loggedIn} />} />
+            <div className="body">
+                <div className="page">
+                    <Routes>
+                        <Route path="/" element={<Main loggedIn={loggedIn} />} />
                         <Route path="/movies" element={<ProtectedRoute
                             loggedIn={loggedIn}
                             filterMoviesByName={filterMoviesByName}
@@ -183,11 +181,10 @@ function App() {
                         <Route path="/signup" element={<Register onSubmit={handleRegistrationSubmit} errorGlobal={errorGlobal} resetErrorGlobal={resetErrorGlobal} />} />
                         <Route path="/signin" element={<Login onSubmit={handleLoginSubmit} errorGlobal={errorGlobal} resetErrorGlobal={resetErrorGlobal} />} />
                         <Route path="*" element={<NotFound />} />
-                </Routes>
-
+                    </Routes>
+                </div>
             </div>
-        </div>
-        </CurrentUserContext.Provider >
+        </CurrentUserContext.Provider>
     );
 }
 

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./Profile.css";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
-import { CurrentUserContext } from "../Context/CurrentUserContext";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import { validator } from "../Validator/Validator";
 
 function Profile({ signOut, loggedIn, onSubmit }) {

@@ -20,5 +20,5 @@ class MoviesApi {
 }
 
 export const moviesApi = new MoviesApi({
-    url: "https://api.nomoreparties.co/beatfilm-movies"
+    BASE_URL: "https://api.nomoreparties.co/beatfilm-movies"
 })

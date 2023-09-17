@@ -4,6 +4,7 @@ import Form from "../Form/Form"
 import { validator } from "../Validator/Validator"
 
 function Login({ onSubmit, errorGlobal, resetErrorGlobal }) {
+
   const [formValue, setFormValue] = useState({
     email: "",
     password: ""
@@ -90,7 +91,7 @@ function Login({ onSubmit, errorGlobal, resetErrorGlobal }) {
               onChange={handleChangeLogged}
               error={errors.email}
             />
-             <span className="form__input-error">{errors.email}</span>
+            <span className="form__input-error">{errors.email}</span>
           </label>
           <label className="form__label">
             Пароль
@@ -109,7 +110,7 @@ function Login({ onSubmit, errorGlobal, resetErrorGlobal }) {
             <span className="form__input-error form__input-error_general">
               {errorGlobal}</span>
           </label>
-        </Form>
+        </Form >
       </section>
     </main>
   )
