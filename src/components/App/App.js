@@ -47,7 +47,9 @@ function App() {
     const handleLoginSubmit = (userInfo) => {
         auth
             .authorize(userInfo)
-            .then(() => {
+                .then((data) => {
+                    if (data.token) 
+                    localStorage.setItem("token", data.token);
                 setLoggedIn(true)
                 navigate("/movies", { replace: true })
             })

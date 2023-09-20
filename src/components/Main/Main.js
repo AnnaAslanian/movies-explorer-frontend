@@ -7,17 +7,19 @@ import Portfolio from "../Portfolio/Portfolio"
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 
-function Main() {
-    const isAuthUser = false
+import "./Main.css";
+
+function Main({ loggedIn }) {
+
     return (<div className="main">
-        {<Header isAuth={isAuthUser} />}
-        {<main>
+        {<Header isAuth={loggedIn} />}
+        <main>
             <Promo />
             <AboutProject />
             <Techs />
             <AboutMe />
             <Portfolio />
-        </main>}
+        </main>
         <Footer />
     </div>
     );

@@ -77,6 +77,7 @@ function Register({ onSubmit, errorGlobal, resetErrorGlobal }) {
     validate();
   }, [formValue]);
 
+
   return (
     <main>
       <section>

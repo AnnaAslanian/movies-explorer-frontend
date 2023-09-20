@@ -79,11 +79,11 @@ class MainApi {
     }
 }
 
-
-export const mainApi = new MainApi({
-    url: "http://localhost:3000",
-     headers: {
-        authorization: `Bearer ${localStorage.getItem("userId")}`,
-        "Content-Type": "application/json",
+  
+  export const mainApi = new MainApi({
+    url: "https://api.diplom.students.nomoreparties.co",
+    headers: {
+      authorization: `Bearer ${localStorage.getItem("userId")}`,
+      "Content-Type": "application/json",
     },
-});
+  });

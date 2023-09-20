@@ -29,7 +29,7 @@ function SearchForm({ onSubmit, isShortMovie, onChange }) {
     } else {
       setValues("");
     }
-  }, [isSavedMoviesPage, , setValues]);
+  }, [isSavedMoviesPage, setValues]);
   
   return (
     <section className="search">
@@ -41,6 +41,7 @@ function SearchForm({ onSubmit, isShortMovie, onChange }) {
             type="text"
             placeholder="Фильм"
             required
+            name="query"
             onChange={handleChange}
             value={values.query ?? ""}
           >
