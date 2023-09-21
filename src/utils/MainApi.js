@@ -81,9 +81,9 @@ class MainApi {
 
   
   export const mainApi = new MainApi({
-    url: "https://api.diplom.students.nomoreparties.co",
+    url: "http://localhost:3000",
     headers: {
-      authorization: `Bearer ${localStorage.getItem("userId")}`,
+      authorization: `Bearer ${localStorage.getItem("token")}`,
       "Content-Type": "application/json",
     },
   });

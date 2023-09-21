@@ -20,9 +20,9 @@ function Profile({ signOut, loggedIn, onSubmit }) {
     } else if (name === "email" && value !== currentUser.email) {
       setIsProfileChanged(true);
     } else if (name === "name" && value === currentUser.name) {
-      setIsProfileChanged(false); // Пользователь вернулся к первоначальному имени
+      setIsProfileChanged(false);
     } else if (name === "email" && value === currentUser.email) {
-      setIsProfileChanged(false); // Пользователь вернулся к первоначальной почте
+      setIsProfileChanged(false);
     }
     if (name === "name") {
       setName(value);

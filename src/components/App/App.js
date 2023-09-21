@@ -51,7 +51,7 @@ function App() {
                     if (data.token) 
                     localStorage.setItem("token", data.token);
                 setLoggedIn(true)
-                navigate("/movies", { replace: true })
+                navigate("/movies")
             })
             .catch((err) => {
                 setErrorGlobal(err.message)

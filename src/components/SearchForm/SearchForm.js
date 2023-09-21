@@ -47,7 +47,7 @@ function SearchForm({ onSubmit, isShortMovie, onChange }) {
           >
           </input>
           <button className="search__form-button" type="submit">
-            <img src={find} alt="Стрелка для поиска" className="search__button search__button-image" />
+            <img src={find} alt="Стрелка поиска" className="search__button search__button-image" />
           </button>
         </div>
         <FilterCheckbox onChange={onChange} value={isShortMovie} />
