@@ -33,7 +33,7 @@ function SearchForm({ onSubmit, isShortMovie, onChange }) {
   
   return (
     <section className="search">
-      <form onSubmit={handleSearch}>
+      <form onSubmit={handleSearch} noValidate>
         <div className="search__form">
           <input
             className="search__input"

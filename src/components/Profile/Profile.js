@@ -38,7 +38,6 @@ function Profile({ signOut, loggedIn, onSubmit }) {
       setErrors(errors);
       return Object.keys(errors).length === 0;
     }
-
   };
 
   const handleEditClick = (e) => {
@@ -77,12 +76,9 @@ function Profile({ signOut, loggedIn, onSubmit }) {
     }
   };
 
-
-
   useEffect(() => {
     validate();
   }, [name, email]);
-
 
   return (
     <div className="profile">
