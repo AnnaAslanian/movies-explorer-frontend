@@ -81,7 +81,7 @@ class MainApi {
 
   
   export const mainApi = new MainApi({
-    url: "http://localhost:3000",
+    url: "https://api.diplom.students.nomoreparties.co",
     headers: {
       authorization: `Bearer ${localStorage.getItem("token")}`,
       "Content-Type": "application/json",
