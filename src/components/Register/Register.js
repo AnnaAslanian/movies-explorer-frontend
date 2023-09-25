@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react"
 import "../Form/Form.css"
 import Form from "../Form/Form"
 import { validator } from "../Validator/Validator"
+import NotFound from "../NotFound/NotFound"
 
-function Register({ onSubmit, errorGlobal, resetErrorGlobal }) {
+function Register({ onSubmit, errorGlobal, resetErrorGlobal, loggedIn }) {
 
   const [formValue, setFormValue] = useState({
     email: "",
@@ -78,8 +79,9 @@ function Register({ onSubmit, errorGlobal, resetErrorGlobal }) {
   }, [formValue]);
 
 
+
   return (
-    <main>
+    loggedIn ? <NotFound /> : <main>
       <section>
         <Form
           title="Добро пожаловать!"
@@ -119,7 +121,6 @@ function Register({ onSubmit, errorGlobal, resetErrorGlobal }) {
               minLength="4"
               maxLength="40"
               onChange={handleChangeLogged}
-
             />
             <span className="form__input-error">{errors.email}</span>
           </label>
@@ -136,14 +137,11 @@ function Register({ onSubmit, errorGlobal, resetErrorGlobal }) {
               minLength="6"
               maxLength="20"
               onChange={handleChangeLogged}
-
             />
             <span className="form__input-error">{errors.password}</span>
-
             <span className="form__input-error form__input-error_general">
               {errorGlobal}</span>
           </label>
-
         </Form>
       </section>
     </main>

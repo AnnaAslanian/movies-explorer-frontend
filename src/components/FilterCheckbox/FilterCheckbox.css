@@ -1,6 +1,7 @@
 .filter {
   margin-top: 33px;
   display: flex;
+  justify-content: flex-start;
 }
 
 .filter__title {

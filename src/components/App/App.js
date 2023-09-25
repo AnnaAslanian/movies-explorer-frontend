@@ -51,7 +51,8 @@ function App() {
                     if (data.token) 
                     localStorage.setItem("token", data.token);
                 setLoggedIn(true)
-                navigate("/movies")
+                alert("Вы успешно вошли в аккаунт")
+                navigate("/movies", { replace: true })
             })
             .catch((err) => {
                 setErrorGlobal(err.message)
@@ -61,9 +62,9 @@ function App() {
     const handleRegistrationSubmit = (data) => {
         auth
             .register(data)
-            .then((info) => {
+            .then(() => {
                 handleLoginSubmit({ email: data.email, password: data.password })
-                setCurrentUser(info)
+                alert("Вы успешно зарегистрировались")
             })
             .catch((err) => {
                 setErrorGlobal(err.message)
@@ -180,8 +181,8 @@ function App() {
                             signOut={signOut}
                             element={Profile}
                         />} />
-                        <Route path="/signup" element={<Register onSubmit={handleRegistrationSubmit} errorGlobal={errorGlobal} resetErrorGlobal={resetErrorGlobal} />} />
-                        <Route path="/signin" element={<Login onSubmit={handleLoginSubmit} errorGlobal={errorGlobal} resetErrorGlobal={resetErrorGlobal} />} />
+                        <Route path="/signup" element={<Register onSubmit={handleRegistrationSubmit} loggedIn={loggedIn} errorGlobal={errorGlobal} resetErrorGlobal={resetErrorGlobal} />} />
+                        <Route path="/signin" element={<Login onSubmit={handleLoginSubmit} loggedIn={loggedIn} errorGlobal={errorGlobal} resetErrorGlobal={resetErrorGlobal} />} />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
                 </div>

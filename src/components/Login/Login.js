@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react"
 import "../Form/Form.css"
 import Form from "../Form/Form"
 import { validator } from "../Validator/Validator"
+import NotFound from "../NotFound/NotFound"
 
-function Login({ onSubmit, errorGlobal, resetErrorGlobal }) {
+function Login({ onSubmit, errorGlobal, resetErrorGlobal, loggedIn }) {
 
   const [formValue, setFormValue] = useState({
     email: "",
@@ -66,7 +67,7 @@ function Login({ onSubmit, errorGlobal, resetErrorGlobal }) {
   }
 
   return (
-    <main>
+    loggedIn ? <NotFound /> : <main>
       <section>
         <Form
           title="Рады видеть!"
