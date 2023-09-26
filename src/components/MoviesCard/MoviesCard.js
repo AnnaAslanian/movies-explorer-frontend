@@ -35,7 +35,7 @@ function MoviesCard({ movie, onClick, isLike }) {
             <h2 className="card__name">{movie.nameRU}</h2>
             <span className="card__time">{convertTime(movie.duration)}</span>
           </div>
-          <button type="button" className={buttonImages()} onClick={handleClick}></button>
+          {/* <button type="button" className={buttonImages()} onClick={handleClick}></button> */}
         </div>
       </li>
     </>

@@ -1,4 +1,5 @@
-export const BASE_URL = "https://api.diplom.students.nomoreparties.co";
+//export const BASE_URL = "https://api.diplom.students.nomoreparties.co";
+export const BASE_URL = "http://localhost:3000";
 
 const checkResponse = async (res) => {
   if (res.ok) {

@@ -39,7 +39,7 @@ function App() {
             .setUserInfo(data)
             .then((userInfo) => {
                 setCurrentUser(userInfo)
-
+                alert("Вы успешно отредактировали профиль")
             })
             .catch((err) => console.log(`Ошибка ${err}`))
     }

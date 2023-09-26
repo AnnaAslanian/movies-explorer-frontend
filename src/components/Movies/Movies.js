@@ -16,6 +16,7 @@ function Movies({ loggedIn, filterShortMovies, filterMoviesByName, savedMovies, 
   const [isShortMovie, setIsShortMovie] = useState(checkIsShotMovies);
   const allMovies = JSON.parse(localStorage.getItem("allMovies")) ?? [];
   const [filterMovies, setFilterMovies] = useState([]);
+  const [text, setText] = useState("")
 
 
   const handleFilterMovies = (movies, request, isShort) => {
@@ -38,6 +39,7 @@ function Movies({ loggedIn, filterShortMovies, filterMoviesByName, savedMovies, 
   const findMovie = (req, isShortCheck) => {
     setIsLoading(true);
     setSearchText("");
+    setText(req)
     if (!allMovies.length) {
       moviesApi
         .getInitialMovies()
@@ -57,9 +59,11 @@ function Movies({ loggedIn, filterShortMovies, filterMoviesByName, savedMovies, 
     }
     localStorage.setItem("request", req);
     localStorage.setItem("isShortMovie", isShortCheck);
+    // setText("")
   };
 
   useEffect(() => {
+    console.log(text)
     setIsLoading(true);
     const defaultMovies = JSON.parse(localStorage.getItem("filteredMovies"));
     if (defaultMovies) {
@@ -73,7 +77,7 @@ function Movies({ loggedIn, filterShortMovies, filterMoviesByName, savedMovies, 
       }
     }
     setIsLoading(false);
-  }, [filterShortMovies, isShortMovie]);
+  }, [filterShortMovies, isShortMovie, text]);
 
 
   const handleClickMovie = (movie) => {
@@ -93,7 +97,7 @@ function Movies({ loggedIn, filterShortMovies, filterMoviesByName, savedMovies, 
       <SearchForm onSubmit={findMovie} onChange={handleCheckBox} isShortMovie={isShortMovie} />
       {isLoading && <Preloader />}
       <MoviesCardList movies={filterMovies}
-        searchText={searchText} savedMovies={savedMovies} onClick={handleClickMovie} />
+        searchText={searchText} savedMovies={savedMovies} onClick={handleClickMovie} text={text} />
     </main>
     <Footer />
   </div>
